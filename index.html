@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Game</title>
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap : 20px;
+            height: 200px;
+            width: 200px;
+        }
+        div img{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="show"></h1>
+        <button class="btn" ><img src="" alt="Dice" class="dicepic"></button>
+    </div>
+    <script >
+        btn = document.querySelector(".btn");
+        btn.onclick=()=>{
+            dicepic = document.querySelector(".dicepic")
+            show = document.querySelector(".show");
+            num = Math.floor(Math.random() * (7 - 1) + 1);
+            show.innerHTML = num;
+            
+            if (num == 1) {
+                dicepic.src = "images dice1.png";
+
+            }
+            if (num == 2) {
+                dicepic.src ="images dice2.jpeg";
+
+            }
+            if (num == 3) {
+                dicepic.src = "image dice 3.webp";
+
+            }
+            if (num == 4) {
+                dicepic.src = "images dice 4.png";
+
+            }
+            if (num == 5) {
+                dicepic.src = "image dice 5.webp";
+
+            }
+            if (num == 6) {
+                dicepic.src = "image dice 6.png";
+            }
+        }
+    </script>
+</body>
+</html>
